@@ -1,6 +1,7 @@
 .home-container {
     display: flex;
-    padding-left: 92px;
+    padding-left: 140px;
+    padding-right: 92px;
 }
 
 .title {
