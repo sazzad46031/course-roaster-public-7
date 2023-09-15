@@ -1,0 +1,52 @@
+.home-container {
+    display: flex;
+    padding-left: 92px;
+}
+
+.title {
+    color: #1C1B1B;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.info {
+    display: flex;
+}
+
+.price {
+    margin-right: 10px;
+}
+
+.card {
+    width: 280px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.btn {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #2F80ED;
+    background: #2F80ED;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 9PX 110PX;
+}
+.icon{
+    margin-right: 10px;
+    
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    width: 67%;
+    margin-top: 48px;
+}
+.cart{
+    width: 33%;
+}
