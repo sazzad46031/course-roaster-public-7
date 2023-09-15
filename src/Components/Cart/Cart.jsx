@@ -1,15 +1,21 @@
 /* eslint-disable react/jsx-key */
 import PropTypes from 'prop-types'
-const Cart = ({selectedCourse}) => {
+import './Cart.css'
+// eslint-disable-next-line react/prop-types
+const Cart = ({selectedCourse, remaining, totalCredit}) => {
     console.log(selectedCourse)
     return (
         <div>
-            <h2>This is cart</h2>
+            <h3 className='remaining'>Credit Hour Remaining {remaining} hr</h3>
+            
+            <h3 className='course'>Course Name</h3>
             {
-                selectedCourse.map(course => (<ol key={course.id}>
-                    <li>{course.title}</li>
-                </ol>))
+                selectedCourse.map(course => (
+                    <li key={course.id}>{course.title}</li>
+                ))
             }
+
+            <h3 className='credit'>Total Credit Hour : {totalCredit}</h3>
         </div>
     );
 };

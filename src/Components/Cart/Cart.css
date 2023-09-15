@@ -1,0 +1,24 @@
+.remaining {
+    color: #2F80ED;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    border-bottom: 1px solid grey;
+}
+
+.course {
+    color: #1C1B1B;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.credit {
+    color: rgba(28, 27, 27, 0.80);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    border-top: 1px solid grey;
+}

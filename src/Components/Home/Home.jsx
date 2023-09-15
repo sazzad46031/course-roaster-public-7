@@ -6,6 +6,9 @@ import Cart from '../Cart/Cart';
 const Home = () => {
     const [allCourse, setAllCourse] = useState([])
     const [selectedCourse, setSelectedCourse] = useState([])
+    const [totalCredit, setTotalCredit] = useState(0)
+    const [remaining,setRemaining] = useState(0)
+    
     useEffect(()=>{
         fetch('json.data')
         .then(res => res.json())
@@ -13,11 +16,24 @@ const Home = () => {
     },[])
     const handleSelectCourse = course =>{
         const isExist = selectedCourse.find(item => item.id === course.id)
+        let count = course.credit;
         if(isExist){
             return alert('this does not work')
         }
         else{
-            setSelectedCourse([...selectedCourse,course])
+            selectedCourse.forEach((item) =>{
+                count = count + item.credit
+            })
+            const totalRemaining = 20 - count;
+            if(count > 20){
+                return alert('it does not work')
+            }
+            else{
+                setRemaining(totalRemaining)
+                setTotalCredit(count)
+                setSelectedCourse([...selectedCourse,course])
+            }
+            
         }
         
     }
@@ -40,7 +56,7 @@ const Home = () => {
                     }
                 </div>
                 <div className='cart'>
-                    <Cart selectedCourse={selectedCourse}></Cart>
+                    <Cart selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit}></Cart>
                 </div>
             </div>
        </div>
