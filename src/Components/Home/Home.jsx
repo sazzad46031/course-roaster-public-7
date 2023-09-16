@@ -9,7 +9,7 @@ const Home = () => {
     const [allCourse, setAllCourse] = useState([])
     const [selectedCourse, setSelectedCourse] = useState([])
     const [totalCredit, setTotalCredit] = useState(0)
-    const [remaining,setRemaining] = useState(0)
+    const [remaining,setRemaining] = useState(20)
     const notify = () => toast.error("Already booked!",{
         position : 'top-center'
     });
